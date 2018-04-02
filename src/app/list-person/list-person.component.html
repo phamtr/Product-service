@@ -1,0 +1,14 @@
+<p>Sort by:
+    <select [(ngModel)]="sortPropName">
+        <option value="name">Name</option>
+        <option value="age">Age</option>
+        <option value="height">Height</option>
+        <option value="weight">Weight</option>
+    </select>
+</p>
+<div *ngFor="let person of arrPerson | sort : sortPropName">
+    <h3>Name: {{ person.name }}</h3>
+    <p>Age: {{ person.age }}</p>
+    <p>Height: {{ person.height }}</p>
+    <p>Weight: {{ person.weight }}</p>
+</div>
