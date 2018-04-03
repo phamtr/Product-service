@@ -26,4 +26,11 @@ export class CalService {
         .toPromise()
         .then(res => res.text());
     }
+    SignupCompany(email: string, password: string) {
+        const body = JSON.stringify({ email, password});
+        const headers = new Headers({ 'Content-Type': 'application/json' });
+        return this.http.post('http://localhost:3000/user/signup', body, { headers })
+        .toPromise()
+        .then(res => res.text());
+    }
 }

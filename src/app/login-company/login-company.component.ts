@@ -12,7 +12,7 @@ export class LoginCompanyComponent implements OnInit {
   constructor(private calService: CalService) { }
 
   ngOnInit() {
-    this.calService.LoginCompany('test3@test.com', 'Ttester')
+    this.calService.SignupCompany('test1@test.com', 'Ttester')
     .then(user => console.log(user))
     .catch(err => console.log(err))
   }
